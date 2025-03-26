@@ -29,20 +29,27 @@ clearButton.addEventListener('click', () => {
     }
 });
 
-saveButton.addEventListener('click', () => {
+saveButton.addEventListener('click', async () => {
     const selectedMood = moodSelect.value;
     const timestamp = new Date().toLocaleString();
     const note = noteInput.value.trim();
 
     moods.push({ mood: selectedMood, timestamp: timestamp, note: note });
-
     updateMoodList();
     saveMoods();
-    sendToGoogleSheets(selectedMood, note);
-
-
     noteInput.value = ''; // Clear note input
+
+    // Send data to Google Sheets
+    const response = await fetch("Yhttps://script.google.com/macros/s/AKfycbwFZuFom8K-Q9fMdIzo4H8LxmD_YHko8PfVgpwNv0AdPUC_QyNxTIVAfpD7U31XL_gYiA/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ mood: selectedMood, note: note }),
+    });
+
+    console.log("Data sent to Google Sheets");
 });
+
 function sendToGoogleSheets(mood, note) {
     const timestamp = new Date().toLocaleString();
     const data = { mood, note, timestamp };
