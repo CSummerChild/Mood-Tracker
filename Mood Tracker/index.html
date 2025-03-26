@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<title>Mood Tracker </title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        <h1>Mood Tracker</h1>
+        <label for="mood">How are you feeling today?</label>
+        <select id="mood">
+            <option value="Happy">Happy 😊</option>
+    <option value="Sad">Sad 😢</option>
+    <option value="Neutral">Neutral 😐</option>
+    <option value="Excited">Excited 🤩</option>
+    <option value="Angry">Angry 😠</option>
+    <option value="Anxious">Anxious 😰</option>
+    <option value="Stressed">Stressed 😖</option>
+    <option value="Tired">Tired 😴</option>
+    <option value="Sick">Sick 🤒</option>
+    <option value="Confused">Confused 🤔</option>
+    <option value="Bored">Bored 😑</option>
+    <option value="Surprised">Surprised 😲</option>
+    <option value="Disappointed">Disappointed 😞</option>
+    <option value="Frustrated">Frustrated 😤</option>
+    <option value="Grateful">Grateful 🙏</option>
+    <option value="Hopeful">Hopeful 🌟</option>
+    <option value="Insecure">Insecure 😟</option>
+    <option value="Lonely">Lonely 😔</option>
+    <option value="Nervous">Nervous 😬</option>
+    <option value="Overwhelmed">Overwhelmed 😩</option>
+    <option value="Peaceful">Peaceful ☮️</option>
+    <option value="Proud">Proud 🏆</option>
+    <option value="Relaxed">Relaxed 😌</option>
+    <option value="Satisfied">Satisfied 😃</option>
+    <option value="Scared">Scared 😨</option>
+    <option value="Shocked">Shocked 😱</option>
+    <option value="Silly">Silly 🤪</option>
+    <option value="Thankful">Thankful ❤️</option>
+        </select>
+        <label for="note">Write a note about your mood:</label>
+            <textarea id="note" rows="3" placeholder="Type here..."></textarea>
+
+        <button id="saveMood">Save Mood</button>
+
+        <h2>Your Moods</h2>
+        <ul id="moodList"></ul>
+        </div>      
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
