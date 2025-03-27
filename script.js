@@ -40,7 +40,7 @@ saveButton.addEventListener('click', async () => {
     noteInput.value = ''; // Clear note input
 
     // Send data to Google Sheets
-    const response = await fetch("https://script.google.com/macros/s/AKfycbz4K0nYTWAzmeoQdBsyc19-LYyS3M9eKzQG4R-Xvs7XWAoyXNU1BPgW79bq3Lq6J-PUBw/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbyGnznDAdBSvQCRAoyLqNd2NnIZERtqXshKW8rf4FaY/dev", {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
